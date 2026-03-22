@@ -52,8 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-gray-900 antialiased">
         <header className="border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
           <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-              {siteConfig.name}
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <img src="/images/thinkinleverage-logo.png" alt={siteConfig.name} className="h-8 w-auto" />
             </Link>
             <div className="flex gap-5 text-sm text-gray-600">
               <Link href="/blog" className="hover:text-gray-900">Articles</Link>
