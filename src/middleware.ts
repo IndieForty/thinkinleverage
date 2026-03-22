@@ -296,6 +296,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/author/paul-allen', request.url), 301)
   }
 
+  // Ghost page/ prefix paths -> strip prefix
+  if (slug.startsWith('page/')) {
+    return NextResponse.redirect(new URL('/blog', request.url), 301)
+  }
+
   // If this slug exists in our kept content, redirect to /blog/slug
   if (KEPT_SLUGS.has(slug)) {
     return NextResponse.redirect(new URL(`/blog/${slug}`, request.url), 301)
