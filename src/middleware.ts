@@ -268,7 +268,7 @@ export function middleware(request: NextRequest) {
   if (
     cleanPath.startsWith('/blog') ||
     cleanPath.startsWith('/category') ||
-    cleanPath.startsWith('/author') ||
+    cleanPath === '/author/paul-allen' ||
     cleanPath.startsWith('/feed') ||
     cleanPath.startsWith('/about') ||
     cleanPath.startsWith('/contact') ||
